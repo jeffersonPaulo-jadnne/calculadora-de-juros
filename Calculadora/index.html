@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investimentos e Juros Compostos</title>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Script global do AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6059392385177670"
+       crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>💹 Simulador Financeiro</h1>
+    <p class="subtitle">Invista e veja seu dinheiro crescer</p>
+
+    <!-- Abas -->
+    <div class="tabs">
+      <div class="tab active" data-tab="compound">Juros Compostos</div>
+      <div class="tab" data-tab="investment">Investimentos</div>
+    </div>
+
+    <!-- Juros Compostos -->
+    <div id="compound" class="tab-content active">
+      <div class="calculator">
+        <input type="number" id="principal" placeholder="Valor inicial (R$)">
+        <input type="number" id="rate" placeholder="Taxa mensal (%)">
+        <input type="number" id="time" placeholder="Meses">
+        <button id="calculateCompound">Calcular</button>
+      </div>
+      <table id="compoundTable"></table>
+      <p>💰 Investido: <span id="compoundInvested">R$ 0,00</span></p>
+      <p>📈 Valor Final: <span id="compoundFinal">R$ 0,00</span></p>
+    </div>
+
+    <!-- Anúncio horizontal após a calculadora -->
+    <ins class="adsbygoogle"
+        style="display:block; height:90px; margin:20px 0;"
+        data-ad-client="ca-pub-6059392385177670"
+        data-ad-slot="9919107954"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    <!-- Investimentos -->
+    <div id="investment" class="tab-content">
+      <div class="carousel-container">
+        <button id="prevBtn">⬅</button>
+        <div id="carouselTrack" class="carousel-track"></div>
+        <button id="nextBtn">➡</button>
+      </div>
+
+      <!-- Anúncio horizontal após o carrossel -->
+      <ins class="adsbygoogle"
+          style="display:block; height:90px; margin:20px 0;"
+          data-ad-client="ca-pub-6059392385177670"
+          data-ad-slot="9919107954"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+      <div class="stock-details">
+        <h3 id="selectedStock">Selecione uma ação</h3>
+        <canvas id="stockChart"></canvas>
+      </div>
+
+      <div class="investment-calculator">
+        <select id="stockSelect"></select>
+        <input type="number" id="quantity" placeholder="Quantidade de ações">
+        <input type="number" id="investmentPeriod" placeholder="Anos de investimento">
+        <button id="calculateBtn">Simular Investimento</button>
+      </div>
+      <table id="resultTable"></table>
+      <p>💵 Investimento Total: <span id="totalInvestment">US$ 0.00</span></p>
+      <p>🏦 Valor com Dividendos: <span id="dividendAmount">US$ 0.00</span></p>
+    </div>
+
+    <!-- Rodapé com anúncio horizontal -->
+    <footer>
+      <p>© 2025 Simulador Financeiro</p>
+      <ins class="adsbygoogle"
+          style="display:block; height:90px; margin:20px auto;"
+          data-ad-client="ca-pub-6059392385177670"
+          data-ad-slot="9919107954"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
